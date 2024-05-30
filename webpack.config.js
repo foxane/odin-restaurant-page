@@ -1,6 +1,5 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const WatchExternalFilesPlugin = require("webpack-watch-external-files-plugin");
 
 module.exports = {
   mode: "development",
@@ -17,9 +16,6 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index/index.html",
-    }),
-    new WatchExternalFilesPlugin({
-      files: ["src/**/*"],
     }),
   ],
   module: {
