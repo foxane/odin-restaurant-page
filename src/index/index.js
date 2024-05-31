@@ -1,4 +1,3 @@
-import printMe from "../menu/menu.js";
 import "./index.css";
 
 console.log("hi");
