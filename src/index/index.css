@@ -88,6 +88,10 @@ main {
   align-items: center;
 
   background-color: var(--clr-bg-content);
+  backdrop-filter: blur(2px);
+  position: relative;
+
+  transition: background 1s;
 }
 
 footer {
@@ -109,4 +113,8 @@ footer a:hover {
 .nav__ul .nav__btn-active {
   border-bottom: 2px solid var(--clr-accent);
   color: var(--clr-accent);
+}
+/* Prevent transition on page load */
+.preload {
+  transition: none !important;
 }
