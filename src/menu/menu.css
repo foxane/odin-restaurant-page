@@ -1,0 +1,67 @@
+.menu {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  padding: 2rem 0;
+}
+
+.menu__card {
+  max-width: 25rem;
+  padding: 1.5rem;
+
+  display: grid;
+  grid-template-rows: 2rem 1fr 6rem 2rem 2.2rem;
+  place-items: center;
+  gap: 1rem;
+
+  background-color: #38383850;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.342);
+  backdrop-filter: blur(10px);
+
+  transition: background 0.25s;
+}
+
+.menu__card h3 {
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.menu__card img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 1px solid rgba(165, 163, 131, 0.788);
+}
+
+.menu__card p {
+  font-weight: 500;
+}
+
+.menu__card .card__price {
+  font-style: italic;
+  font-weight: 600;
+}
+.menu__card button {
+  width: 50%;
+  height: 100%;
+
+  font-size: 1.3rem;
+  font-family: var(--ff-body);
+  font-weight: 600;
+
+  background-color: goldenrod;
+  border-radius: 5px;
+  border: 2px solid transparent;
+}
+.menu__card button:hover {
+  border: 2px solid white;
+  background-color: var(--clr-accent);
+  cursor: pointer;
+}
+.menu__card:hover {
+  background-image: linear-gradient(to bottom, #00000069, #0000003a);
+}
