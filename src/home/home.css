@@ -1,0 +1,35 @@
+.home {
+  display: flex;
+  flex-flow: row wrap-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.home__left {
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 20px;
+  max-width: 500px;
+}
+.home__left h1 {
+  font-size: 3.2rem;
+}
+.home__left p {
+  font-size: 1.4rem;
+}
+.home__left button {
+  padding: 0.3em 1em;
+  margin: 0 auto;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: var(--ff-body);
+  border-radius: 2px;
+  background-color: var(--clr-cta);
+  border: 1px solid white;
+}
+
+.home__left button:hover {
+  background-color: gold;
+  border: 1px solid white;
+  cursor: pointer;
+}

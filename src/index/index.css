@@ -1,3 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap");
+
+:root {
+  --clr-bg: #1c1d21;
+  --clr-bg-grad: linear-gradient(
+    to right,
+    rgba(20, 17, 12, 0.979),
+    rgba(7, 3, 3, 0.836)
+  );
+  --clr-bg-content: #00000073;
+  --clr-secondary: #d1b1c8;
+  --clr-accent: #f7e733;
+  --clr-cta: rgb(206, 155, 15);
+  --clr-text: white;
+  --clr-text-reverse: black;
+
+  --ff-header: Caveat, sans-serif;
+  --ff-body: Teachers, sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background-color: grey;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 8rem 1fr 2rem;
+
+  font-family: var(--ff-body);
+  font-size: 1.2rem;
+  background: url(../images/index-bg-bw.jpg) center no-repeat;
+  background-size: cover;
+  color: var(--clr-text);
+}
+
+header {
+  background-image: var(--clr-bg-grad);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+header button {
+  font-weight: 700;
+  font-family: var(--ff-header);
+  background: none;
+  border: none;
+
+  gradition: text-shadow 0.25s, color 0.25s;
+}
+
+header button:hover {
+  text-shadow: 0px 0px 5px var(--clr-accent);
+  color: var(--clr-accent);
+  cursor: pointer;
+}
+
+.header__btn {
+  color: var(--clr-accent);
+  font-size: 4rem;
+}
+
+.nav__ul {
+  display: flex;
+  column-gap: 2rem;
+}
+
+.nav__ul button {
+  color: var(--clr-text);
+  font-family: var(--ff-body);
+  font-size: 1.5rem;
+}
+
+main {
+  background-image: var(--clr-bg-grad);
+  display: flex;
+  justify-content: center;
+}
+
+#content {
+  max-width: 1000px;
+  padding: 0 2rem;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--clr-bg-content);
+  border-radius: 20px;
+}
+
+footer {
+  background-image: var(--clr-bg-grad);
+  text-align: center;
+}
+footer a {
+  color: var(--clr-text);
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--clr-accent);
+}
+
+/* Utils */
+.nav__ul .nav__btn-active {
+  border-bottom: 2px solid var(--clr-accent);
+  color: var(--clr-accent);
 }

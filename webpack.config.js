@@ -9,6 +9,7 @@ module.exports = {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist"),
     clean: true,
+    assetModuleFilename: "[name][ext]",
   },
   devtool: "inline-source-map",
   devServer: {

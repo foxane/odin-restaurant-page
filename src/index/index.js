@@ -1,5 +1,4 @@
 import "./index.css";
+import homePage from "../home/home";
 
-console.log("hi");
-document.body.appendChild(printMe());
-console.log("watch test");
+document.querySelector("#content").appendChild(homePage());
