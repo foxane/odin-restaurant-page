@@ -115,6 +115,6 @@ footer a:hover {
   color: var(--clr-accent);
 }
 /* Prevent transition on page load */
-.preload {
+.preload * {
   transition: none !important;
 }
