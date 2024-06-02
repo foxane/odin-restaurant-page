@@ -12,9 +12,22 @@ const content = document.querySelector("#content");
   };
 })();
 
+let bgPos = "right";
+const changeBg = () => {
+  document.querySelector(
+    "main"
+  ).style.cssText = `background-image:linear-gradient(to bottom ${bgPos},rgba(5, 5, 5, 0.808),rgb(0, 0, 0));`;
+  if (bgPos === "right") {
+    bgPos = "left";
+  } else {
+    bgPos = "right";
+  }
+};
+
+let currPage = "";
 const changePage = function (cases) {
-  let currPage = "";
   if (cases === currPage) return;
+  changeBg();
   content.innerHTML = "";
   switch (cases) {
     case "home":
@@ -26,6 +39,7 @@ const changePage = function (cases) {
       currPage = cases;
       break;
   }
+  console.log(currPage);
 };
 
 const handler = (() => {
@@ -38,3 +52,5 @@ const handler = (() => {
 })();
 
 changePage("home");
+
+export default changePage;
