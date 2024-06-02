@@ -1,4 +1,5 @@
 import "./home.css";
+import changePage from "../index";
 import image from "../images/home-img.png";
 
 export default function () {
@@ -20,6 +21,9 @@ export default function () {
   p.textContent =
     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,ipsa!";
   btn.textContent = "Menu";
+  btn.addEventListener("click", () => {
+    changePage("menu");
+  });
   homeLeft.appendChild(h1);
   homeLeft.appendChild(p);
   homeLeft.appendChild(btn);

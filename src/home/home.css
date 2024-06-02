@@ -35,6 +35,10 @@
   cursor: pointer;
 }
 
+.home__right img {
+  animation: slide 1s;
+}
+
 @media (max-width: 1200px) {
   .home {
     justify-content: center;
@@ -43,5 +47,18 @@
     display: block;
     width: 300px;
     margin: 0 auto;
+  }
+}
+
+@keyframes slide {
+  0% {
+    position: relative;
+    right: -100%;
+    transform: rotate(-50deg) scale(1.5, 2);
+  }
+  100% {
+    position: relative;
+    right: 0%;
+    transform: rotate(0deg) scale(1, 1);
   }
 }
