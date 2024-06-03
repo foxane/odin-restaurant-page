@@ -22,15 +22,15 @@
 
 body {
   min-height: 100vh;
+  width: 100vw;
   display: grid;
   grid-template-rows: 5rem 1fr 3rem;
 
   font-family: var(--ff-body);
   font-size: 1.2rem;
   background-image: url(../images/index-bg-bw.jpg);
-  background-position: center;
+  background-position: top;
   background-repeat: repeat;
-  background-size: contain;
   color: var(--clr-text);
 
   overflow-x: hidden;
