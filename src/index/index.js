@@ -1,6 +1,7 @@
 import "./index.css";
 import homePage from "../home/home";
 import menuPage from "../menu/menu";
+import contactPage from "../contact/contact";
 
 const content = document.querySelector("#content");
 // Remove preload class to prevent transition on page load
@@ -36,6 +37,10 @@ const changePage = function (cases) {
       break;
     case "menu":
       content.appendChild(menuPage());
+      currPage = cases;
+      break;
+    case "contact":
+      content.appendChild(contactPage());
       currPage = cases;
       break;
   }
