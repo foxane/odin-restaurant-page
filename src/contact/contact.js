@@ -1,58 +1,14 @@
 import "./contact.css";
 
 export default function () {
-  // SOCIAL
-  const SOCIAL_DATA = [
-    {
-      href: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
-      iconClass: "fa-brands",
-      iconClass2: "fa-facebook-f",
-      text: "Naspad",
-    },
-    {
-      href: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
-      iconClass: "fa-brands",
-      iconClass2: "fa-x-twitter",
-      text: "@naspad",
-    },
-    {
-      href: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
-      iconClass: "fa-brands",
-      iconClass2: "fa-instagram",
-      text: "@naspad",
-    },
-    {
-      href: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
-      iconClass: "fa-brands",
-      iconClass2: "fa-telegram",
-      text: "+0123 4563",
-    },
-  ];
-
+  // CONTAINER and HEEADER
   const contact = document.createElement("div");
   contact.classList.add("contact");
 
   const h2 = document.createElement("h2");
   h2.textContent = "Reach Us!";
   contact.appendChild(h2);
-
-  const ul = document.createElement("ul");
-  ul.classList.add("social");
-
-  for (const item of SOCIAL_DATA) {
-    const li = document.createElement("li");
-    const a = document.createElement("a");
-    a.href = item.href;
-    a.target = "_blank";
-    const i = document.createElement("i");
-    i.classList.add("fa-brands", item.iconClass, item.iconClass2);
-    a.appendChild(i);
-    a.appendChild(document.createTextNode(item.text));
-    li.appendChild(a);
-    ul.appendChild(li);
-  }
-
-  contact.appendChild(ul);
+  // SOCIAL
 
   // FORM
   const form = document.createElement("form");
@@ -90,20 +46,58 @@ export default function () {
   submitButton.type = "submit";
   submitButton.textContent = "Submit";
 
-  const note = document.createElement("p");
-  note.classList.add("note", "hidden");
-  note.textContent =
-    "Thank you for trying it out, this simple contact page is really tedious to make :)";
-  contact.appendChild(note);
+  form.appendChild(submitButton);
+
+  const SOCIAL_DATA = [
+    {
+      href: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+      iconClass: "fa-brands",
+      iconClass2: "fa-facebook-f",
+      text: "Naspad",
+    },
+    {
+      href: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+      iconClass: "fa-brands",
+      iconClass2: "fa-x-twitter",
+      text: "@naspad",
+    },
+    {
+      href: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+      iconClass: "fa-brands",
+      iconClass2: "fa-instagram",
+      text: "@naspad",
+    },
+    {
+      href: "https://www.youtube.com/watch?v=xvFZjo5PgG0",
+      iconClass: "fa-brands",
+      iconClass2: "fa-telegram",
+      text: "+0123 4563",
+    },
+  ];
+
+  const ul = document.createElement("ul");
+  ul.classList.add("social");
+
+  for (const item of SOCIAL_DATA) {
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = item.href;
+    a.target = "_blank";
+    const i = document.createElement("i");
+    i.classList.add("fa-brands", item.iconClass, item.iconClass2);
+    a.appendChild(i);
+    li.appendChild(a);
+    ul.appendChild(li);
+  }
+
   // Submit event
   submitButton.addEventListener("click", (e) => {
     e.preventDefault();
-    note.classList.remove("hidden");
+    textarea.value =
+      "Thank you for trying it out :) \nThis simple contact page is really tedious to make.\nAlso, check out social media links below, they won't let you down";
   });
 
-  form.appendChild(submitButton);
-
   contact.appendChild(form);
-
+  contact.appendChild(ul);
   return contact;
 }
