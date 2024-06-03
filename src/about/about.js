@@ -10,13 +10,14 @@ export default function () {
   about.appendChild(h2);
 
   const p1 = document.createElement("p1");
-  p1.textContent = `Welcome to <strong>Naspad Delights</strong>, where culinary finesse
+  p1.textContent = `Welcome to Naspad Delights, where culinary finesse
   meets genuine hospitality in every dish we serve. Situated in the
   heart of Brookville, our restaurant beckons connoisseurs of fine
   dining for an unparalleled gastronomic journey. At
-  <strong>Naspad Delights</strong>, we take pride in curating an
+  Naspad Delights, we take pride in curating an
   exquisite menu that tantalizes the taste buds and leaves a lasting
   impression on every guest.`;
+
   about.appendChild(p1);
 
   const img = document.createElement("img");
@@ -26,12 +27,12 @@ export default function () {
   about.appendChild(img);
 
   const p2 = document.createElement("p2");
-  p2.textContent = `Indulge in Culinary Harmony at <strong>Naspad Delights</strong>,
+  p2.textContent = `Indulge in Culinary Harmony at Naspad Delights,
   where flavors from around the world blend seamlessly with warm
   hospitality. Nestled in the charming town of Greenwood, our
   restaurant offers a haven for food aficionados seeking an
   extraordinary dining experience. At
-  <strong>Naspad Delights</strong>, we are committed to crafting
+  Naspad Delights, we are committed to crafting
   exceptional dishes that delight the senses and create cherished
   memories.`;
   p2.classList.add("p2");
